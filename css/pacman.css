@@ -1,5 +1,5 @@
-/* .pacman {
-    background-image: url("./img/loadketqua.png");
+.pacman {
+    background-image: url("../img/loadketqua.png");
     position: absolute;
     top: 0em;
     bottom: 10;
@@ -9,7 +9,7 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
-} */
+}
 
 .ball1, .ball2 {
     width: 0;
