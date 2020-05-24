@@ -1,0 +1,155 @@
+/*Mobile*/
+@media screen and (max-width: 619px) {
+    .contentImg,.contentImg1{
+        background-size: 380px 100px;
+        left: 0%;
+        width: 400px;
+        
+    }
+    
+    .content,.content2{
+        font-size: 1em;
+        width: 18em;
+        font-weight: bold;
+        margin-left: 45px;
+    }
+    .ngaybe,.ngaybe1{
+        width: 6em;
+        height: 2em;
+        margin: 0;
+        
+    }
+    
+    h2{
+        left: 7px;
+        bottom: 4em;
+        font-size: 20px;
+    }
+    .header{
+        top: 1.5em;
+        left: 0;
+        font-size: 1.3em;
+        width: 10em;
+    }
+    .img{
+        top: 14em;
+        left: 33%;
+        height: 230px;
+    }
+    .img1{
+        top:500px;
+        left: 33%;
+        height: 230px;
+    }
+    .img img,.img1 img{
+        width: 10em;
+    }
+    
+    
+}
+@media screen and (min-width: 620px) and (max-width:768px) {
+    .contentImg,.contentImg1{
+       background-size: 500px 120px;
+       left: 0%;
+       width: 500px;
+       
+       
+       
+   }
+   
+   .content,.content2{
+       font-size: 1.3em;
+       font-weight: bold;
+       margin-left: 27px;
+   }
+   
+   .ngaybe,.ngaybe1{
+       
+       margin-top: -1.2em;
+       
+   }
+  
+   
+   h2{
+       
+       bottom: 3.6em;
+       
+   }
+   .container{
+       left: 2%;
+   }
+    
+   .header{
+       top: 2em;
+       left: 0;
+       font-size: 1.4em;
+   }
+
+   .img{
+       top: 78px;
+       left: 65%;
+       height: 230px;
+   }
+   .img1{
+       top:365px;
+       left:65%;
+       height: 230px;
+   }
+   .img img,.img1 img{
+       width: 14em;
+   }
+    
+}
+@media screen and (min-width: 768px) and (max-width:991px) {
+     .contentImg,.contentImg1{
+        background-size: 500px 120px;
+        left: 0%;
+        width: 500px;
+        
+        
+        
+    }
+    
+    .content,.content2{
+        font-size: 1.3em;
+        font-weight: bold;
+        margin-left: 27px;
+    }
+    
+    .ngaybe,.ngaybe1{
+        
+        margin-top: -1.2em;
+        
+    }
+   
+    
+    h2{
+        
+        bottom: 3.6em;
+        
+    }
+    .container{
+        left: 2%;
+    }
+     
+    .header{
+        top: 2em;
+        left: 0;
+        font-size: 1.4em;
+    }
+
+    .img{
+        top: 78px;
+        left: 65%;
+        height: 230px;
+    }
+    .img1{
+        top:365px;
+        left:65%;
+        height: 230px;
+    }
+    .img img,.img1 img{
+        width: 14em;
+    }
+     
+}

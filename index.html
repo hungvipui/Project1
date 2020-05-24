@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <style>
+        input,
+        select {
+            display: block;
+            height: 3em;
+            width: 20em;
+            border-radius: 20px;
+            border-color: lightgray;
+            margin-bottom: 1.5em;
+            margin-top: 5px;
+            border: none;
+            outline: none;
+
+        }
+
+        input {
+            padding-left: 2em;
+            width: 18em;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select {
+            text-align: center;
+            text-align-last: right;
+            font-weight: bold;
+        }
+
+
+
+        select:required:invalid {
+            color: #666;
+        }
+
+        option[value=""][disabled] {
+            display: none;
+        }
+
+        option {
+            color: #000;
+        }
+
+
+
+
+
+        body {
+            margin: auto;
+            overflow: hidden;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            position: absolute;
+            top: 20%;
+            left: 30%;
+
+            color: white;
+        }
+
+        #thongtin {
+            font-size: 3em;
+
+        }
+
+        #submit {
+            text-align: center;
+            width: 20em;
+            color: white;
+            font-weight: bold;
+            transition: 0.5s;
+            background-size: 200% auto;
+            border: none;
+            background-image: linear-gradient(to right, #4000ff 0%, #ff00ff 51%, #4000ff 100%);
+        }
+
+        #submit:hover {
+            background-position: right center;
+        }
+
+
+        #container {
+            background-image: url("./img/Background.png");
+            height: 100vh;
+            
+            /* -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover; */
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+    
+    <script src="./js/value.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <form action="result.html"  id="myForm">
+            <h1 id="thongtin">Thông Tin</h1>
+            <div>
+                <label for="">
+                    HỌ VÀ TÊN
+                </label>
+                <input id="name" type="text" required placeholder="Name...">
+            </div>
+            <div>
+                <label for="">
+                    GIỚI TÍNH
+                </label>
+
+                <select id="select1" required>
+                    <option value="" disabled selected >Nam/Nữ</option>
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                </select>
+            </div>
+            <div>
+                <label id="c" for="">
+                    ƯỚC MƠ HỒI NHỎ
+                </label>
+                <select id="select2" required>
+                    <option value="" disabled selected >Ưoc mơ của bạn?</option>
+                    <option value="Giáo viên">Giáo viên</option>
+                    <option value="Bộ đội">Bộ đội</option>
+                    <option value="Doanh nhân">Doanh nhân</option>
+                    <option value="Tỷ phú ">Tỷ phú </option>
+                    <option value="Chủ tịch nước">Chủ tịch nước</option>
+                    <option value="Siêu nhân ">Siêu nhân </option>
+                    <option value="Tiếp viên hàng không ">Tiếp viên hàng không </option>
+                    <option value="Họa sĩ ">Họa sĩ </option>
+                    <option value="Công an ">Công an  </option>
+                    <option value="Ca sĩ">Ca sĩ</option>
+                    <option value="Nhà thiên văn học  ">Nhà thiên văn học </option>
+                </select>
+            </div>
+
+            <input id="submit" type="submit" onclick="localStorage1()" value="Kết Quả">
+            <!-- <button onclick="myFunction()" >hi</button> -->
+
+
+        </form>
+    </div>
+    <br style="clear: both;">
+
+
+</body>
+
+</html>

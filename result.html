@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/cssResult.css">
+    <link rel="stylesheet" href="./css/resposive.css">
+
+    <link rel="stylesheet" href="./css/pacman.css">
+    <script src="./js/jquery-3.4.1.js"></script>
+
+
+</head>
+
+<body>
+    <div id="container">
+        <div class="container">
+            <div class="header">
+                <h1>Kết quả</h1>
+            </div>
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous"
+                src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0"></script>
+
+            <div class="contentImg">
+                <div class="ngaybe">
+                    <h2>Ngày Bé</h2>
+                </div>
+                <div class="content">
+                    <p id="result"> </p>
+                </div>
+            </div>
+            <div class="img" id="img1">
+                <!-- <img id="img1" src="LoadKetqua.png" style="width: 100%;" alt=""> -->
+            </div>
+            
+
+
+
+            <div class="contentImg1">
+                <div style="background:linear-gradient(to right, #4000ff 0%, #ff00ff);color:white" class="ngaybe1">
+                    <h2>Hiện tại</h2>
+                </div>
+                <div class="content2">
+                    <p id="resultfeture"></p>
+                </div>
+            </div>
+            <div class="img1" id="img2">
+                <!-- <img id="img1" src="LoadKetqua.png" style="width: 100%;" alt=""> -->
+            </div>
+            <div id="fb" class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"
+                data-size="large"><a target="_blank"
+                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+                    class="fb-xfbml-parse-ignore">Chia sẻ</a></div>
+
+
+        </div>
+    </div>
+    <div class="pacman">
+        <div class="containerPacman">
+            <div class="ball1"></div>
+            <div class="ball2"></div>
+            <div class="ball3"></div>
+            <div class="ball4"></div>
+            <div class="ball5"></div>
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+
+    $(window).on("load", function () {
+        setTimeout(function () { $(".pacman").fadeOut("slow"); }, 0);
+    });
+
+</script>
+<script>
+    var gender = "";
+    if (localStorage.getItem("select1") == "Nam") {
+        gender = localStorage.getItem("name") + " đẹp trai ";
+        document.getElementById("result").innerText = gender + "mơ ước" + " trở thành " + localStorage.getItem("select2");
+    } else if (localStorage.getItem("select1") == "Nữ") {
+        gender = localStorage.getItem("name") + " xinh ";
+        document.getElementById("result").innerText = gender + "mơ ước" + " trở thành " + localStorage.getItem("select2");
+
+    }
+    function changeImg(link) {
+        var img = document.createElement("img");
+        img.src = link;
+        var src = document.getElementById("img1");
+        src.appendChild(img);
+    }
+    function changeImg1(link) {
+        var img = document.createElement("img");
+        img.src = link;
+        var src = document.getElementById("img2");
+        src.appendChild(img);
+    }
+    var arr = ["./img/hientai.png", "./img/hientai1.png", "./img/hientai2.png", "./img/hientai3.png", "./img/hientai4.png"];
+    var randomImg = arr[Math.floor(Math.random() * arr.length)];
+    changeImg1(randomImg);
+    switch (localStorage.getItem("index")) {
+        case "1": document.getElementById("resultfeture").innerText = "Cố lên " + gender + "sắp giàu rồi!";
+            changeImg("./img/cogiao.png");
+            break;
+        case "2": document.getElementById("resultfeture").innerText = "Cố lên " + gender + "sắp giàu rồi!";
+            changeImg("./img/bodoi.png");
+            break;
+        case "3": document.getElementById("resultfeture").innerText = gender + "sẽ trở thành Mark Zuckerberg của tương lai!";
+            changeImg("./img/luatsu.png");
+            break;
+        case "4": document.getElementById("resultfeture").innerText = "Bill Gates ơi đua top không? Chờ " + gender + "tốt nghiệp Aptech nhé!";
+            changeImg("./img/tiphu.png");
+            break;
+        case "5": document.getElementById("resultfeture").innerText = gender + "quyết tâm học IT để đưa Việt Nam sánh vai với các cường quốc năm châu!";
+            changeImg("./img/luatsu.png");
+            break;
+        case "6": document.getElementById("resultfeture").innerText = gender + "sẽ học IT để giải cứu Thế giới!!!";
+            changeImg("./img/sieunhan.png");
+            break;
+        case "7": document.getElementById("resultfeture").innerText = gender + "làm IT - vi vu khắp Thế giới!";
+            changeImg("./img/tiepvien.png");
+            break;
+        case "8": document.getElementById("resultfeture").innerText = "Kể từ lúc biết vẽ code ra Đô la, " + gender + "không còn thích vẽ tranh nữa!";
+            changeImg("./img/vetranh1.png");
+            break;
+        case "9": document.getElementById("resultfeture").innerText = "Ở đâu khó, ở đó có " + gender + ". Hacker đâu mau hiện nguyên hình!";
+            changeImg("./img/congan.png");
+            break;
+        case "10": document.getElementById("resultfeture").innerText = "Ôi quàng tử hãy tha thứ cho " + gender + "bị trúng lời nguyền đam mê IT mất rồi!";
+            changeImg("./img/casi.png");
+            break;
+        case "11": document.getElementById("resultfeture").innerText = "Ngày ngắm code, đêm ta lại ngắm sao, cuộc đời " + gender + "thật đẹp biết bao!";
+            changeImg("./img/thienvanhoc.png");
+            break;
+
+    }
+</script>
+
+</html>

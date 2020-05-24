@@ -1,0 +1,81 @@
+.pacman {
+    background-image: url("C:/Web_Du_Doan/img/loadketqua.png");
+    position: absolute;
+    top: 0em;
+    bottom: 10;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.ball1, .ball2 {
+    width: 0;
+    height: 0;
+    border: 2em solid yellow;
+    border-radius: 50%;
+    animation-name: ballPerent;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    border-right-color: transparent;
+}
+
+.ball2 {
+    animation-name: ballPerent2;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    margin-top:-65px ;
+}
+.ball3{
+    width: 0;
+    height: 0;
+    border: 10px solid yellow;
+    border-radius: 50%;
+    position: absolute;
+    left: 6em;
+    top: 1.5em;
+    animation-name: ball;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+.containerPacman{
+    position: absolute;
+    top: 54%;
+    left: 48%;
+}
+
+@keyframes ballPerent {
+    0% {
+        transform: rotate(270deg);
+    }
+    50% {
+        transform: rotate(360deg);
+        
+    }
+    100% {
+        transform: rotate(270deg);
+        
+    }
+}
+
+@keyframes ballPerent2 {
+    0% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(0);
+        
+    }
+    100% {
+        transform: rotate(90deg);
+        
+    }
+}
+@keyframes ball{
+    100%{
+        left: 2em;
+    }
+    
+}
